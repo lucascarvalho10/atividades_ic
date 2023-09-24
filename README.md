@@ -1,5 +1,5 @@
 <h1 align="center">
-  <img alt="IC" title="#ic2023" src="./ic.jpg" />
+  <img alt="IC" title="#ic2023" src="./IC.jpg" />
 </h1>
 
 <h1 align="center">Projeto de Iniciação Científica</h1>
