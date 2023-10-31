@@ -162,7 +162,6 @@ def medicao_qualidade(dimensao_x, dimensao_y, tempo, pontos_contorno, pontos_dom
     rna = rna.to(device)
 
     def calcular_grid(rna, comprimento_x, comprimento_y, tempo_final, nx=101, ny=101,nt=101):
-
         # Definir grid
         x = np.linspace(0.,comprimento_x,nx)
         y = np.linspace(0.,comprimento_y,ny)
