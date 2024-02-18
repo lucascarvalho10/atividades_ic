@@ -1,19 +1,12 @@
+# Import the W&B Python Library and log into W&B
+import wandb
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
 import numpy as np
-import time
 
-import plotly.express as px
-import plotly.graph_objects as go
-
-import torch.optim as optim
-
-import matplotlib.pyplot as plt
-
-from datetime import datetime
-
-import wandb
+wandb.init()
+wandb.login()
 
 class ResidualBlock(nn.Module):
     def __init__(self, in_features, out_features):
@@ -66,11 +59,13 @@ class pinn:
     self.pontos_no_dominio_validacao = pontos_no_dominio_validacao
 
     if type(device) == str:
-      device = torch.device(device)
+        device = torch.device(device)
     self.device = device
 
+    self.criar_rede_neural()  # Add this line to initialize the neural network
+
     if train:
-      self.treinamento_da_rede()
+        self.treinamento_da_rede()
 
   def gerar_lado(self, pontos_por_lado, comprimento_x, comprimento_y, tempo_final, velocidade = 0):
         x = np.random.uniform(size=(pontos_por_lado, 1), low=0, high=comprimento_x)
@@ -345,6 +340,19 @@ class pinn:
 
     epocas = np.array(range(self.epocas))
 
+    self.gerar_pontos_contorno()
+    self.gerar_pontos_equacao()
+
+    # Passando para GPU e otimizando
+    self.definicao_otimizador()
+
+    # Realizar as correções nas chamadas dos métodos da classe pinn
+    self.X_contorno = self.X_contorno.clone().detach().to(torch.device('cuda' if torch.cuda.is_available() else 'cpu'))
+    self.Y_contorno = self.Y_contorno.clone().detach().to(torch.device('cuda' if torch.cuda.is_available() else 'cpu'))
+    self.X_equacao_validacao = self.X_equacao_validacao.clone().detach().requires_grad_(True).to(torch.device('cuda' if torch.cuda.is_available() else 'cpu'))
+    self.X_contorno_validacao = self.X_contorno_validacao.clone().detach().to(torch.device('cuda' if torch.cuda.is_available() else 'cpu'))
+    self.Y_contorno_validacao = self.Y_contorno_validacao.clone().detach().to(torch.device('cuda' if torch.cuda.is_available() else 'cpu'))
+
     # Colocar rede em modo de treinamento
     self.rna.train()
 
@@ -396,101 +404,38 @@ class pinn:
     self.perda_contorno_historico_validacao = perda_contorno_historico_validacao
     self.perda_equacao_historico_validacao = perda_equacao_historico_validacao
 
+sweep_config = {
+    'method': 'random',
+    'metric': {'goal': 'minimize', 'name': 'loss'},
+    'parameters': {
+        'comprimento_y': {
+            'distribution': 'uniform',
+            'max': 1.5,
+            'min': 0.5,
+        },
+        'comprimento_x': {
+            'distribution': 'uniform',
+            'max': 1.5,
+            'min': 0.5,
+        },
+        'tempo_final': {
+            'distribution': 'uniform',
+            'max': 1.5,
+            'min': 0.5,
+        },
+        'epocas': {'value': 10000},
+        'learning_rate': {
+            'distribution': 'uniform',
+            'max': 0.1,
+            'min': 0.0
+        },
+        'alpha': {
+            'distribution': 'uniform',
+            'max': 0.3,
+            'min': 0.05
+        },
+    }
+}
 
-  def calcular_grid(self, nx=101, ny=101,nt=101):
-    # Definir grid
-    x = np.linspace(0.,self.comprimento_x,nx)
-    y = np.linspace(0.,self.comprimento_y,ny)
-    t = np.linspace(0.,self.tempo_final,nt)
-    [t_grid, y_grid, x_grid] = np.meshgrid(t,y,x)
-
-    x = torch.tensor(x_grid.flatten()[:,None],requires_grad=True,dtype=torch.float).to(self.device)
-    y = torch.tensor(y_grid.flatten()[:,None],requires_grad=True,dtype=torch.float).to(self.device)
-    t = torch.tensor(t_grid.flatten()[:,None],requires_grad=True,dtype=torch.float).to(self.device)
-
-    # Avaliar modelor
-    self.rna.eval()
-    Y_pred = self.rna(torch.hstack((x,y,t)))
-    # Formatar resultados em array
-    u_pred = Y_pred.cpu().detach().numpy()[:,0].reshape(x_grid.shape)
-    v_pred = Y_pred.cpu().detach().numpy()[:,1].reshape(x_grid.shape)
-
-    self.x_grid = x_grid
-    self.y_grid = y_grid
-    self.t_grid = t_grid
-    self.u_pred = u_pred
-    self.v_pred = v_pred
-
-  def plot_historico(self):
-    # Plotar histórico
-    epocas = np.array(range(self.epocas))
-    fig = go.FigureWidget()
-    fig.add_trace(go.Scatter(x=epocas, y=self.perda_historico, name='Total', line=dict(color='black', width=4)))
-    fig.add_trace(go.Scatter(x=epocas, y=self.perda_contorno_historico, name='Contorno', line=dict(color='blue', width=2)))
-    fig.add_trace(go.Scatter(x=epocas, y=self.perda_equacao_historico, name='Equacao', line=dict(color='red', width=2)))
-    fig.update_yaxes(type="log")
-    fig.show(renderer="colab")
-
-  def plot_comparacao(self):
-    # Plotar histórico
-    epocas = np.array(range(self.epocas))
-    plt.plot(epocas, self.perda_historico, 'b', label="Perda do treino")
-    plt.plot(epocas, self.perda_historico_validacao, 'r', label="Perdas nos pontos de validação")
-    plt.xlabel('Épocas')
-    plt.ylabel('Perdas')
-    plt.yscale('log')
-    plt.legend()
-    plt.show()
-
-  def plot_resultados(self, epocas=101):
-    # Calcular valores da função e gerar grids
-    self.calcular_grid()
-
-    ind_t_plot = 50  # Esse é o índice do tempo a ser plotado
-
-    # Extrair uma "fatia" dos arrays de coordenadas e soluções
-    x_plot = self.x_grid[:, ind_t_plot, :]
-    y_plot = self.y_grid[:, ind_t_plot, :]
-    u_plot = self.u_pred[:, ind_t_plot, :]
-
-    # Check dimensions and data types of x_plot, y_plot, and u_plot
-
-    # Check if the data is not empty
-
-    # Plot the surface
-    fig = go.Figure(data=[go.Surface(x=x_plot, y=y_plot, z=u_plot)])
-
-    # Check scene settings
-    fig.update_layout(scene=dict(aspectratio=dict(x=1.5, y=1.5, z=0.5)))
-
-    # Show the figure
-    fig.show()
-
-def main(comprimento_x: int = 1, comprimento_y: int = 1, tempo_final: int = 1,
-    pontos_no_contorno: int = 1000, pontos_no_dominio: int = 2000, numero_de_neuronios = [3, 20, 20, 20, 2],
-    pontos_no_contorno_validacao: int = 200, pontos_no_dominio_validacao: int = 300,
-    alpha: float = 0.2, epocas: int = 20000, learning_rate: float = 0.01,
-    train: bool = False, verbose: bool = False, max_time = None,
-    device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')):
-    # Criação do objeto
-    pinn_burgers = pinn(comprimento_x, comprimento_y, tempo_final, pontos_no_contorno, pontos_no_dominio, numero_de_neuronios, pontos_no_contorno_validacao, pontos_no_dominio_validacao, alpha, epocas, learning_rate, train, verbose, max_time, device)
-
-    # Pontos de contorno e domínio para o treinamento e para a validação
-    pinn_burgers.gerar_pontos_contorno()
-    pinn_burgers.gerar_pontos_equacao()
-
-    # Criação da rede
-    pinn_burgers.criar_rede_neural()
-
-    # Passando para GPU e otimizando
-    pinn_burgers.definicao_otimizador()
-
-    # Realizar as correções nas chamadas dos métodos da classe pinn
-    pinn_burgers.X_contorno = pinn_burgers.X_contorno.clone().detach().to(device)
-    pinn_burgers.Y_contorno = pinn_burgers.Y_contorno.clone().detach().to(device)
-    pinn_burgers.X_equacao_validacao = pinn_burgers.X_equacao_validacao.clone().detach().requires_grad_(True).to(device)
-    pinn_burgers.X_contorno_validacao = pinn_burgers.X_contorno_validacao.clone().detach().to(device)
-    pinn_burgers.Y_contorno_validacao = pinn_burgers.Y_contorno_validacao.clone().detach().to(device)
-
-    # Treinamento
-    pinn_burgers.treinamento_da_rede()
+sweep_id = wandb.sweep(sweep_config, project="ic_pinn")
+wandb.agent(sweep_id, pinn().treinamento_da_rede(), count=200)
