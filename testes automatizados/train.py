@@ -389,12 +389,12 @@ class pinn:
         if epoca % 500 == 0:
             print(f'Epoca: {epoca}, Perda: {self.perda.item()} (Contorno: {self.perda_contorno.item()}, Equacao: {self.perda_equacao.item()})')
             print(f'Perda Validação: {self.perda_validacao.item()} (Contorno Validação: {self.perda_contorno_validacao.item()}, Equacao: {self.perda_equacao_validacao.item()})')
-            wandb.log({'epoch': epoca, 'loss': self.perda.item()})
 
         # Ressortear os pontos - evitar overfitting
         # self.regerar_pontos_validacao()
         self.regerar_pontos_contorno()
         self.regerar_pontos_equacao()
+        wandb.log({'epoch': epoca, 'loss': self.perda.item()})
 
     self.perda_historico = perda_historico
     self.perda_contorno_historico = perda_contorno_historico
@@ -405,10 +405,18 @@ class pinn:
     self.perda_equacao_historico_validacao = perda_equacao_historico_validacao
 
 sweep_config = {
-    'method': 'random',
-    'metric': {'goal': 'minimize', 'name': 'loss'},
-    'parameters': {
-        'comprimento_y': {
+    'method': 'random'
+    }
+
+metric = {
+    'name': 'loss',
+    'goal': 'minimize'   
+    }
+
+sweep_config['metric'] = metric
+
+parameters_dict = {
+    'comprimento_y': {
             'distribution': 'uniform',
             'max': 1.5,
             'min': 0.5,
@@ -434,8 +442,15 @@ sweep_config = {
             'max': 0.3,
             'min': 0.05
         },
-    }
 }
 
+sweep_config['parameters'] = parameters_dict
+
+parameters_dict.update({
+    'epochs': {
+        'value': 1}
+    })
+
+
 sweep_id = wandb.sweep(sweep_config, project="ic_pinn")
-wandb.agent(sweep_id, pinn().treinamento_da_rede(), count=200)
+wandb.agent(sweep_id, pinn().treinamento_da_rede(), count=5)
