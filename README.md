@@ -1,55 +1,23 @@
-<h1 align="center">
-  <img alt="IC" title="#ic2023" src="./IC.jpg" />
-</h1>
+Este repositório contém todos os códigos e softwares de labs e aulas para o Projeto de Iniciação Científica na Poli USP! Todos os slides, aulas e monitorias estão disponíveis aqui e no site, bem como a organização do grupo.
 
-<h1 align="center">Projeto de Iniciação Científica</h1>
+# Projeto de Iniciação Científica
 
-<h1 align="center">
-    <a href="[https://threejs.org/](https://en.wikipedia.org/wiki/Physics-informed_neural_networks)">🔗 RNA & PINN</a>
-</h1>
-<p align="center">🚀 Machine Learning - Redes Neurais </p>
+Trata-se do repositório voltado para organizar os códigos desenvolvidos ao longo do projeto, bem como os exercícios e as etapas intermediárias do projeto final. O projeto trata da Introdução à Aplicação de Rdes Neurais e à construção de um modelo físico para resolver os problemas.
 
+## Instruções e Utilização
 
-![Badge](https://img.shields.io/badge/Poli-USP-%add8e6?style=for-the-badge&logo=ghost)
-![Badge](https://img.shields.io/badge/PME-3200-%1234a5?style=for-the-badge&logo=ghost)
-
-
-<p align="center">
- <a href="#objetivo">Objetivo</a> •
- <a href="#roadmap">Roadmap</a> • 
- <a href="#tecnologias">Tecnologias</a> • 
- <a href="#contribuicao">Contribuição</a> • 
- <a href="#licenc-a">Licença</a> 
-</p>
-
-<h4 align="center"> 
-	🚧  🚀 Em construção...  🚧
-</h4>
-
-### Pré-requisitos
-
-Antes de começar, você vai precisar ter instalado em sua máquina as seguintes ferramentas:
-[Git](https://git-scm.com), [TensorFlow]([https://tensorflow.org/?hl=pt-br)). 
-Além disto é bom ter um editor para trabalhar com o código como [VSCode](https://code.visualstudio.com/)
-
-### 🛰️ Rodando a Aplicação (MatLab)
+Todos os códigos foram desenvolvidos em Jupyter Notebooks (Python) e nas demais linguagens, e sua organização se refere à aplicação de diferentes ferramentas para o desenvolvimento do projeto em sua completude.
 
 ```bash
 # Clone este repositório
-$ git clone <https://github.com/lucascarvalho10/atividades_ic
+$ git clone https://github.com/lucascarvalho10/pme3320
 
 # Acesse a pasta do projeto no terminal/cmd
-$ cd project
+$ cd pme3481
 
 # Instale as dependências
+$ py -m pip install --all 
 
 # Execute a aplicação em modo de desenvolvimento
+$ code .
 ```
-
-### 💡 Ideia Geral
-
-Construir redes neurais informadas por física. A ideia central é reduzir a necessidade de uma base muito grande de dados, e permitir consturir redes neurais que possam ser treinadas a partir de equações que modelem o problema, o que implica menores custos com operações de dados e no processamento de problemas.
-
-<h1 align="center">
-  <img alt="IC" title="#ic2023" src="https://media.tenor.com/Lbfyti3y8UkAAAAC/machine-learning-artificial-intelligence.gif" />
-</h1>
