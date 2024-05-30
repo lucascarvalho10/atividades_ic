@@ -1,0 +1,19 @@
+
+[34m[1mwandb[39m[22m: [33mWARNING[39m Calling wandb.login() after wandb.init() has no effect.
+{'method': 'random',
+ 'metric': {'goal': 'minimize', 'name': 'loss'},
+ 'parameters': {'alpha': {'distribution': 'uniform', 'max': 0.3, 'min': 0.05},
+                'comprimento_x': {'distribution': 'uniform',
+                                  'max': 1.5,
+                                  'min': 0.5},
+                'comprimento_y': {'distribution': 'uniform',
+                                  'max': 1.5,
+                                  'min': 0.5},
+                'epocas': {'value': 10000},
+                'epochs': {'value': 1},
+                'learning_rate': {'distribution': 'uniform',
+                                  'max': 0.1,
+                                  'min': 0.0},
+                'tempo_final': {'distribution': 'uniform',
+                                'max': 1.5,
+                                'min': 0.5}}}

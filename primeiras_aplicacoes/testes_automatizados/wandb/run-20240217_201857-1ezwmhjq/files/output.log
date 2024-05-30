@@ -1,0 +1,7 @@
+/tmp/ipykernel_383744/1117091103.py:272: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  self.X_equacao = torch.tensor(self.X_equacao,requires_grad=True,dtype=torch.float)
+/tmp/ipykernel_383744/1117091103.py:281: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  self.X_equacao_validacao = torch.tensor(self.X_equacao_validacao,requires_grad=True,dtype=torch.float)
+Epoca: 0, Perda: 0.10043489933013916 (Contorno: 0.13689275085926056, Equacao: 0.015366562642157078)
+Perda Validação: 0.10162810981273651 (Contorno Validação: 0.13839653134346008, Equacao: 0.015835147351026535)
+Epoca: 500, Perda: 0.021907418966293335 (Contorno: 0.025213325396180153, Equacao: 0.014193632639944553)

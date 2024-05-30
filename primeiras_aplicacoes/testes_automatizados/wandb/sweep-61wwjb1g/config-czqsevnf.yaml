@@ -1,0 +1,14 @@
+wandb_version: 1
+
+alpha:
+  value: 0.23582859497941527
+comprimento_x:
+  value: 1.4520088668017443
+comprimento_y:
+  value: 1.2185877256182596
+epocas:
+  value: 10000
+learning_rate:
+  value: 0.034680248301217846
+tempo_final:
+  value: 0.9499765072567729

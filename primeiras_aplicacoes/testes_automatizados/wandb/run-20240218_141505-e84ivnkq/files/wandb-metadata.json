@@ -1,0 +1,208 @@
+{
+    "os": "Linux-5.15.0-92-generic-x86_64-with-glibc2.29",
+    "python": "3.8.10",
+    "heartbeatAt": "2024-02-18T17:15:06.665666",
+    "startedAt": "2024-02-18T17:15:05.558718",
+    "docker": null,
+    "cuda": null,
+    "args": [],
+    "state": "running",
+    "program": "train.py",
+    "codePathLocal": "train.py",
+    "codePath": "testes automatizados/train.py",
+    "git": {
+        "remote": "https://github.com/lucascarvalho10/atividades_ic.git",
+        "commit": "4b5750fe8ccd4bb195b3a801516fc798c2d08252"
+    },
+    "email": "lucascarvalholc2001@gmail.com",
+    "root": "/home/lucascarvalho/projeto_ic",
+    "host": "tucano",
+    "username": "lucascarvalho",
+    "executable": "/usr/bin/python3",
+    "cpu_count": 16,
+    "cpu_count_logical": 32,
+    "cpu_freq": {
+        "current": 1252.5004374999999,
+        "min": 1200.0,
+        "max": 3800.0
+    },
+    "cpu_freq_per_core": [
+        {
+            "current": 1200.0,
+            "min": 1200.0,
+            "max": 3800.0
+        },
+        {
+            "current": 1200.0,
+            "min": 1200.0,
+            "max": 3800.0
+        },
+        {
+            "current": 1200.0,
+            "min": 1200.0,
+            "max": 3800.0
+        },
+        {
+            "current": 1200.0,
+            "min": 1200.0,
+            "max": 3800.0
+        },
+        {
+            "current": 1200.0,
+            "min": 1200.0,
+            "max": 3800.0
+        },
+        {
+            "current": 1323.047,
+            "min": 1200.0,
+            "max": 3800.0
+        },
+        {
+            "current": 2600.0,
+            "min": 1200.0,
+            "max": 3800.0
+        },
+        {
+            "current": 1200.0,
+            "min": 1200.0,
+            "max": 3800.0
+        },
+        {
+            "current": 1200.0,
+            "min": 1200.0,
+            "max": 3800.0
+        },
+        {
+            "current": 1200.0,
+            "min": 1200.0,
+            "max": 3800.0
+        },
+        {
+            "current": 1200.0,
+            "min": 1200.0,
+            "max": 3800.0
+        },
+        {
+            "current": 1200.0,
+            "min": 1200.0,
+            "max": 3800.0
+        },
+        {
+            "current": 1200.0,
+            "min": 1200.0,
+            "max": 3800.0
+        },
+        {
+            "current": 1200.0,
+            "min": 1200.0,
+            "max": 3800.0
+        },
+        {
+            "current": 1200.0,
+            "min": 1200.0,
+            "max": 3800.0
+        },
+        {
+            "current": 1200.0,
+            "min": 1200.0,
+            "max": 3800.0
+        },
+        {
+            "current": 1200.0,
+            "min": 1200.0,
+            "max": 3800.0
+        },
+        {
+            "current": 1200.0,
+            "min": 1200.0,
+            "max": 3800.0
+        },
+        {
+            "current": 1200.0,
+            "min": 1200.0,
+            "max": 3800.0
+        },
+        {
+            "current": 1200.0,
+            "min": 1200.0,
+            "max": 3800.0
+        },
+        {
+            "current": 1200.0,
+            "min": 1200.0,
+            "max": 3800.0
+        },
+        {
+            "current": 1200.0,
+            "min": 1200.0,
+            "max": 3800.0
+        },
+        {
+            "current": 1200.0,
+            "min": 1200.0,
+            "max": 3800.0
+        },
+        {
+            "current": 1200.0,
+            "min": 1200.0,
+            "max": 3800.0
+        },
+        {
+            "current": 1200.0,
+            "min": 1200.0,
+            "max": 3800.0
+        },
+        {
+            "current": 1200.0,
+            "min": 1200.0,
+            "max": 3800.0
+        },
+        {
+            "current": 1200.0,
+            "min": 1200.0,
+            "max": 3800.0
+        },
+        {
+            "current": 1200.0,
+            "min": 1200.0,
+            "max": 3800.0
+        },
+        {
+            "current": 1200.0,
+            "min": 1200.0,
+            "max": 3800.0
+        },
+        {
+            "current": 1300.0,
+            "min": 1200.0,
+            "max": 3800.0
+        },
+        {
+            "current": 1200.0,
+            "min": 1200.0,
+            "max": 3800.0
+        },
+        {
+            "current": 1200.0,
+            "min": 1200.0,
+            "max": 3800.0
+        }
+    ],
+    "disk": {
+        "/": {
+            "total": 98.46366119384766,
+            "used": 81.67857360839844
+        }
+    },
+    "gpu": "Quadro P6000",
+    "gpu_count": 1,
+    "gpu_devices": [
+        {
+            "name": "Quadro P6000",
+            "memory_total": 25769803776
+        }
+    ],
+    "memory": {
+        "total": 125.77410888671875
+    }
+}

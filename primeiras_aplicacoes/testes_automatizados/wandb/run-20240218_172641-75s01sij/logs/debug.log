@@ -1,0 +1,84 @@
+2024-02-18 17:26:41,280 INFO    MainThread:431824 [wandb_setup.py:_flush():76] Current SDK version is 0.16.3
+2024-02-18 17:26:41,280 INFO    MainThread:431824 [wandb_setup.py:_flush():76] Configure stats pid to 431824
+2024-02-18 17:26:41,280 INFO    MainThread:431824 [wandb_setup.py:_flush():76] Loading settings from /home/lucascarvalho/.config/wandb/settings
+2024-02-18 17:26:41,281 INFO    MainThread:431824 [wandb_setup.py:_flush():76] Loading settings from /home/lucascarvalho/projeto_ic/testes automatizados/wandb/settings
+2024-02-18 17:26:41,281 INFO    MainThread:431824 [wandb_setup.py:_flush():76] Loading settings from environment variables: {}
+2024-02-18 17:26:41,281 INFO    MainThread:431824 [wandb_setup.py:_flush():76] Applying setup settings: {'_disable_service': False}
+2024-02-18 17:26:41,281 INFO    MainThread:431824 [wandb_setup.py:_flush():76] Inferring run settings from compute environment: {'program_relpath': 'testes automatizados/train.py', 'program_abspath': '/home/lucascarvalho/projeto_ic/testes automatizados/train.py', 'program': 'train.py'}
+2024-02-18 17:26:41,281 INFO    MainThread:431824 [wandb_init.py:_log_setup():526] Logging user logs to /home/lucascarvalho/projeto_ic/testes automatizados/wandb/run-20240218_172641-75s01sij/logs/debug.log
+2024-02-18 17:26:41,281 INFO    MainThread:431824 [wandb_init.py:_log_setup():527] Logging internal logs to /home/lucascarvalho/projeto_ic/testes automatizados/wandb/run-20240218_172641-75s01sij/logs/debug-internal.log
+2024-02-18 17:26:41,281 INFO    MainThread:431824 [wandb_init.py:init():566] calling init triggers
+2024-02-18 17:26:41,281 INFO    MainThread:431824 [wandb_init.py:init():573] wandb.init called with sweep_config: {}
+config: {}
+2024-02-18 17:26:41,281 INFO    MainThread:431824 [wandb_init.py:init():616] starting backend
+2024-02-18 17:26:41,281 INFO    MainThread:431824 [wandb_init.py:init():620] setting up manager
+2024-02-18 17:26:41,283 INFO    MainThread:431824 [backend.py:_multiprocessing_setup():105] multiprocessing start_methods=fork,spawn,forkserver, using: spawn
+2024-02-18 17:26:41,284 INFO    MainThread:431824 [wandb_init.py:init():628] backend started and connected
+2024-02-18 17:26:41,287 INFO    MainThread:431824 [wandb_init.py:init():720] updated telemetry
+2024-02-18 17:26:41,304 INFO    MainThread:431824 [wandb_init.py:init():753] communicating run to backend with 90.0 second timeout
+2024-02-18 17:26:41,868 INFO    MainThread:431824 [wandb_run.py:_on_init():2262] communicating current version
+2024-02-18 17:26:42,256 INFO    MainThread:431824 [wandb_run.py:_on_init():2271] got version response 
+2024-02-18 17:26:42,256 INFO    MainThread:431824 [wandb_init.py:init():804] starting run threads in backend
+2024-02-18 17:26:42,403 INFO    MainThread:431824 [wandb_run.py:_console_start():2241] atexit reg
+2024-02-18 17:26:42,403 INFO    MainThread:431824 [wandb_run.py:_redirect():2096] redirect: wrap_raw
+2024-02-18 17:26:42,403 INFO    MainThread:431824 [wandb_run.py:_redirect():2161] Wrapping output streams.
+2024-02-18 17:26:42,403 INFO    MainThread:431824 [wandb_run.py:_redirect():2186] Redirects installed.
+2024-02-18 17:26:42,404 INFO    MainThread:431824 [wandb_init.py:init():847] run started, returning control to user process
+2024-02-18 17:57:59,678 INFO    MainThread:431824 [wandb_agent.py:run():217] Running runs: []
+2024-02-18 17:57:59,965 INFO    MainThread:431824 [wandb_agent.py:_process_command():313] Agent received command: run
+2024-02-18 17:57:59,966 INFO    MainThread:431824 [wandb_agent.py:_command_run():346] Agent starting run with config:
+	alpha: 0.14050852712956474
+	comprimento_x: 0.578862683957272
+	comprimento_y: 1.4285756057316614
+	epocas: 10000
+	learning_rate: 0.0947124650438359
+	tempo_final: 1.2914821628620723
+2024-02-18 17:57:59,971 INFO    MainThread:431824 [wandb_agent.py:_command_run():418] About to run command: /usr/bin/env python  --alpha=0.14050852712956474 --comprimento_x=0.578862683957272 --comprimento_y=1.4285756057316614 --epocas=10000 --learning_rate=0.0947124650438359 --tempo_final=1.2914821628620723
+2024-02-18 17:58:05,016 INFO    MainThread:431824 [wandb_agent.py:run():217] Running runs: ['9yieoahs']
+2024-02-18 17:58:05,018 INFO    MainThread:431824 [wandb_agent.py:run():252] Cleaning up finished run: 9yieoahs
+2024-02-18 17:58:12,279 WARNING MsgRouterThr:431824 [router.py:message_loop():77] message_loop has been closed
+2024-02-18 17:58:13,211 INFO    MainThread:431824 [wandb_agent.py:_process_command():313] Agent received command: run
+2024-02-18 17:58:13,212 INFO    MainThread:431824 [wandb_agent.py:_command_run():346] Agent starting run with config:
+	alpha: 0.2534195408240535
+	comprimento_x: 1.3845015333276982
+	comprimento_y: 0.5126312971648134
+	epocas: 10000
+	learning_rate: 0.009524010529457083
+	tempo_final: 0.5712623322396042
+2024-02-18 17:58:13,216 INFO    MainThread:431824 [wandb_agent.py:_command_run():418] About to run command: /usr/bin/env python  --alpha=0.2534195408240535 --comprimento_x=1.3845015333276982 --comprimento_y=0.5126312971648134 --epocas=10000 --learning_rate=0.009524010529457083 --tempo_final=0.5712623322396042
+2024-02-18 17:58:18,257 INFO    MainThread:431824 [wandb_agent.py:run():217] Running runs: ['wq6pj5ho']
+2024-02-18 17:58:18,259 INFO    MainThread:431824 [wandb_agent.py:run():252] Cleaning up finished run: wq6pj5ho
+2024-02-18 17:58:18,602 INFO    MainThread:431824 [wandb_agent.py:_process_command():313] Agent received command: run
+2024-02-18 17:58:18,603 INFO    MainThread:431824 [wandb_agent.py:_command_run():346] Agent starting run with config:
+	alpha: 0.2234257772569787
+	comprimento_x: 0.8282524868301939
+	comprimento_y: 0.9362436717216672
+	epocas: 10000
+	learning_rate: 0.09866652236157042
+	tempo_final: 1.0593630469095865
+2024-02-18 17:58:18,607 INFO    MainThread:431824 [wandb_agent.py:_command_run():418] About to run command: /usr/bin/env python  --alpha=0.2234257772569787 --comprimento_x=0.8282524868301939 --comprimento_y=0.9362436717216672 --epocas=10000 --learning_rate=0.09866652236157042 --tempo_final=1.0593630469095865
+2024-02-18 17:58:23,647 INFO    MainThread:431824 [wandb_agent.py:run():217] Running runs: ['5ls4m2at']
+2024-02-18 17:58:23,649 INFO    MainThread:431824 [wandb_agent.py:run():252] Cleaning up finished run: 5ls4m2at
+2024-02-18 17:58:23,940 INFO    MainThread:431824 [wandb_agent.py:_process_command():313] Agent received command: run
+2024-02-18 17:58:23,940 INFO    MainThread:431824 [wandb_agent.py:_command_run():346] Agent starting run with config:
+	alpha: 0.16639119129072005
+	comprimento_x: 0.6022257150258227
+	comprimento_y: 0.8189278097114775
+	epocas: 10000
+	learning_rate: 0.07098896260805106
+	tempo_final: 1.3731394179986802
+2024-02-18 17:58:23,945 INFO    MainThread:431824 [wandb_agent.py:_command_run():418] About to run command: /usr/bin/env python  --alpha=0.16639119129072005 --comprimento_x=0.6022257150258227 --comprimento_y=0.8189278097114775 --epocas=10000 --learning_rate=0.07098896260805106 --tempo_final=1.3731394179986802
+2024-02-18 17:58:28,986 INFO    MainThread:431824 [wandb_agent.py:run():217] Running runs: ['x4kbi6fi']
+2024-02-18 17:58:28,987 INFO    MainThread:431824 [wandb_agent.py:run():252] Cleaning up finished run: x4kbi6fi
+2024-02-18 17:58:32,641 INFO    MainThread:431824 [wandb_agent.py:_process_command():313] Agent received command: run
+2024-02-18 17:58:32,641 INFO    MainThread:431824 [wandb_agent.py:_command_run():346] Agent starting run with config:
+	alpha: 0.16079513422163155
+	comprimento_x: 1.2487110800072148
+	comprimento_y: 1.3596315422047422
+	epocas: 10000
+	learning_rate: 0.010115553016685342
+	tempo_final: 1.0064579175721262
+2024-02-18 17:58:32,646 INFO    MainThread:431824 [wandb_agent.py:_command_run():418] About to run command: /usr/bin/env python  --alpha=0.16079513422163155 --comprimento_x=1.2487110800072148 --comprimento_y=1.3596315422047422 --epocas=10000 --learning_rate=0.010115553016685342 --tempo_final=1.0064579175721262
+2024-02-18 17:58:37,683 INFO    MainThread:431824 [wandb_agent.py:run():217] Running runs: ['isk2slvn']
+2024-02-18 17:58:37,685 ERROR   MainThread:431824 [wandb_agent.py:run():243] Detected 5 failed runs in a row, shutting down.
+2024-02-18 17:58:37,686 INFO    MainThread:431824 [wandb_agent.py:run():247] To change this value set WANDB_AGENT_MAX_INITIAL_FAILURES=val
