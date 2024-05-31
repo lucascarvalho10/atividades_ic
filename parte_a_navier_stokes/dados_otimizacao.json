@@ -1,0 +1,452 @@
+[
+  {
+    "run": "lr_experiment_1",
+    "perda": 0.0742263272,
+    "lr": 0.0000541726,
+    "alpha": 0.316097348,
+    "numero_pontos": 1905,
+    "numero_neuronios": 13,
+    "numero_camadas": 8
+  },
+  {
+    "run": "lr_experiment_2",
+    "perda": 0.0516196862,
+    "lr": 0.0002255197,
+    "alpha": 0.316097348,
+    "numero_pontos": 1905,
+    "numero_neuronios": 13,
+    "numero_camadas": 8
+  },
+  {
+    "run": "lr_experiment_3",
+    "perda": 0.0731910318,
+    "lr": 0.0003862811,
+    "alpha": 0.316097348,
+    "numero_pontos": 1905,
+    "numero_neuronios": 13,
+    "numero_camadas": 8
+  },
+  {
+    "run": "lr_experiment_4",
+    "perda": 0.0563892685,
+    "lr": 0.0002449703,
+    "alpha": 0.316097348,
+    "numero_pontos": 1905,
+    "numero_neuronios": 13,
+    "numero_camadas": 8
+  },
+  {
+    "run": "lr_experiment_5",
+    "perda": 0.0497252941,
+    "lr": 0.0007918665,
+    "alpha": 0.316097348,
+    "numero_pontos": 1905,
+    "numero_neuronios": 13,
+    "numero_camadas": 8
+  },
+  {
+    "run": "lr_experiment_6",
+    "perda": 0.0484840758,
+    "lr": 0.0032542167,
+    "alpha": 0.316097348,
+    "numero_pontos": 1905,
+    "numero_neuronios": 13,
+    "numero_camadas": 8
+  },
+  {
+    "run": "lr_experiment_7",
+    "perda": 0.0863717943,
+    "lr": 0.00009319,
+    "alpha": 0.316097348,
+    "numero_pontos": 1905,
+    "numero_neuronios": 13,
+    "numero_camadas": 8
+  },
+  {
+    "run": "lr_experiment_8",
+    "perda": 0.0547622144,
+    "lr": 0.0164816465,
+    "alpha": 0.316097348,
+    "numero_pontos": 1905,
+    "numero_neuronios": 13,
+    "numero_camadas": 8
+  },
+  {
+    "run": "lr_experiment_9",
+    "perda": 0.0469913557,
+    "lr": 0.0075569486,
+    "alpha": 0.316097348,
+    "numero_pontos": 1905,
+    "numero_neuronios": 13,
+    "numero_camadas": 8
+  },
+  {
+    "run": "lr_experiment_10",
+    "perda": 0.0518761948,
+    "lr": 0.0244048678,
+    "alpha": 0.316097348,
+    "numero_pontos": 1905,
+    "numero_neuronios": 13,
+    "numero_camadas": 8
+  },
+  {
+    "run": "alpha_experiment_1",
+    "perda": 0.0526927039,
+    "lr": 0.0075569486,
+    "alpha": 0.3125509487,
+    "numero_pontos": 1905,
+    "numero_neuronios": 13,
+    "numero_camadas": 8
+  },
+  {
+    "run": "alpha_experiment_2",
+    "perda": 0.0450072102,
+    "lr": 0.0075569486,
+    "alpha": 0.2797163212,
+    "numero_pontos": 1905,
+    "numero_neuronios": 13,
+    "numero_camadas": 8
+  },
+  {
+    "run": "alpha_experiment_3",
+    "perda": 0.0556083955,
+    "lr": 0.0075569486,
+    "alpha": 0.2587425537,
+    "numero_pontos": 1905,
+    "numero_neuronios": 13,
+    "numero_camadas": 8
+  },
+  {
+    "run": "alpha_experiment_4",
+    "perda": 0.0524029098,
+    "lr": 0.0075569486,
+    "alpha": 0.2026865219,
+    "numero_pontos": 1905,
+    "numero_neuronios": 13,
+    "numero_camadas": 8
+  },
+  {
+    "run": "alpha_experiment_5",
+    "perda": 0.0571265295,
+    "lr": 0.0075569486,
+    "alpha": 0.2535549067,
+    "numero_pontos": 1905,
+    "numero_neuronios": 13,
+    "numero_camadas": 8
+  },
+  {
+    "run": "alpha_experiment_6",
+    "perda": 0.0617954284,
+    "lr": 0.0075569486,
+    "alpha": 0.1125700158,
+    "numero_pontos": 1905,
+    "numero_neuronios": 13,
+    "numero_camadas": 8
+  },
+  {
+    "run": "alpha_experiment_7",
+    "perda": 0.0543059185,
+    "lr": 0.0075569486,
+    "alpha": 0.2659956434,
+    "numero_pontos": 1905,
+    "numero_neuronios": 13,
+    "numero_camadas": 8
+  },
+  {
+    "run": "alpha_experiment_8",
+    "perda": 0.0451426841,
+    "lr": 0.0075569486,
+    "alpha": 0.335396835,
+    "numero_pontos": 1905,
+    "numero_neuronios": 13,
+    "numero_camadas": 8
+  },
+  {
+    "run": "alpha_experiment_9",
+    "perda": 0.0458125435,
+    "lr": 0.0075569486,
+    "alpha": 0.3760301615,
+    "numero_pontos": 1905,
+    "numero_neuronios": 13,
+    "numero_camadas": 8
+  },
+  {
+    "run": "alpha_experiment_10",
+    "perda": 0.058358103,
+    "lr": 0.0075569486,
+    "alpha": 0.1620076689,
+    "numero_pontos": 1905,
+    "numero_neuronios": 13,
+    "numero_camadas": 8
+  },
+  {
+    "run": "numero_pontos_experiment_1",
+    "perda": 0.0547158048,
+    "lr": 0.0075569486,
+    "alpha": 0.2797163212,
+    "numero_pontos": 1027,
+    "numero_neuronios": 13,
+    "numero_camadas": 8
+  },
+  {
+    "run": "numero_pontos_experiment_2",
+    "perda": 0.0489222519,
+    "lr": 0.0075569486,
+    "alpha": 0.2797163212,
+    "numero_pontos": 2218,
+    "numero_neuronios": 13,
+    "numero_camadas": 8
+  },
+  {
+    "run": "numero_pontos_experiment_3",
+    "perda": 0.0569736101,
+    "lr": 0.0075569486,
+    "alpha": 0.2797163212,
+    "numero_pontos": 2473,
+    "numero_neuronios": 13,
+    "numero_camadas": 8
+  },
+  {
+    "run": "numero_pontos_experiment_4",
+    "perda": 0.0472184047,
+    "lr": 0.0075569486,
+    "alpha": 0.2797163212,
+    "numero_pontos": 2714,
+    "numero_neuronios": 13,
+    "numero_camadas": 8
+  },
+  {
+    "run": "numero_pontos_experiment_5",
+    "perda": 0.0494085178,
+    "lr": 0.0075569486,
+    "alpha": 0.2797163212,
+    "numero_pontos": 1630,
+    "numero_neuronios": 13,
+    "numero_camadas": 8
+  },
+  {
+    "run": "numero_pontos_experiment_6",
+    "perda": 0.0480240956,
+    "lr": 0.0075569486,
+    "alpha": 0.2797163212,
+    "numero_pontos": 1299,
+    "numero_neuronios": 13,
+    "numero_camadas": 8
+  },
+  {
+    "run": "numero_pontos_experiment_7",
+    "perda": 0.0557753928,
+    "lr": 0.0075569486,
+    "alpha": 0.2797163212,
+    "numero_pontos": 2967,
+    "numero_neuronios": 13,
+    "numero_camadas": 8
+  },
+  {
+    "run": "numero_pontos_experiment_8",
+    "perda": 0.0591299646,
+    "lr": 0.0075569486,
+    "alpha": 0.2797163212,
+    "numero_pontos": 2033,
+    "numero_neuronios": 13,
+    "numero_camadas": 8
+  },
+  {
+    "run": "numero_pontos_experiment_9",
+    "perda": 0.052019313,
+    "lr": 0.0075569486,
+    "alpha": 0.2797163212,
+    "numero_pontos": 2264,
+    "numero_neuronios": 13,
+    "numero_camadas": 8
+  },
+  {
+    "run": "numero_pontos_experiment_10",
+    "perda": 0.0508580916,
+    "lr": 0.0075569486,
+    "alpha": 0.2797163212,
+    "numero_pontos": 1297,
+    "numero_neuronios": 13,
+    "numero_camadas": 8
+  },
+  {
+    "run": "numero_neuronios_experiment_1",
+    "perda": 0.0494033806,
+    "lr": 0.0075569486,
+    "alpha": 0.2797163212,
+    "numero_pontos": 2714,
+    "numero_neuronios": 10,
+    "numero_camadas": 8
+  },
+  {
+    "run": "numero_neuronios_experiment_2",
+    "perda": 0.0559457168,
+    "lr": 0.0075569486,
+    "alpha": 0.2797163212,
+    "numero_pontos": 2714,
+    "numero_neuronios": 4,
+    "numero_camadas": 8
+  },
+  {
+    "run": "numero_neuronios_experiment_3",
+    "perda": 0.055841025,
+    "lr": 0.0075569486,
+    "alpha": 0.2797163212,
+    "numero_pontos": 2714,
+    "numero_neuronios": 7,
+    "numero_camadas": 8
+  },
+  {
+    "run": "numero_neuronios_experiment_4",
+    "perda": 0.0511617623,
+    "lr": 0.0075569486,
+    "alpha": 0.2797163212,
+    "numero_pontos": 2714,
+    "numero_neuronios": 6,
+    "numero_camadas": 8
+  },
+  {
+    "run": "numero_neuronios_experiment_5",
+    "perda": 0.0664661154,
+    "lr": 0.0075569486,
+    "alpha": 0.2797163212,
+    "numero_pontos": 2714,
+    "numero_neuronios": 3,
+    "numero_camadas": 8
+  },
+  {
+    "run": "numero_neuronios_experiment_6",
+    "perda": 0.0650379211,
+    "lr": 0.0075569486,
+    "alpha": 0.2797163212,
+    "numero_pontos": 2714,
+    "numero_neuronios": 7,
+    "numero_camadas": 8
+  },
+  {
+    "run": "numero_neuronios_experiment_7",
+    "perda": 0.0851280317,
+    "lr": 0.0075569486,
+    "alpha": 0.2797163212,
+    "numero_pontos": 2714,
+    "numero_neuronios": 2,
+    "numero_camadas": 8
+  },
+  {
+    "run": "numero_neuronios_experiment_8",
+    "perda": 0.0558668524,
+    "lr": 0.0075569486,
+    "alpha": 0.2797163212,
+    "numero_pontos": 2714,
+    "numero_neuronios": 7,
+    "numero_camadas": 8
+  },
+  {
+    "run": "numero_neuronios_experiment_9",
+    "perda": 0.0537305884,
+    "lr": 0.0075569486,
+    "alpha": 0.2797163212,
+    "numero_pontos": 2714,
+    "numero_neuronios": 12,
+    "numero_camadas": 8
+  },
+  {
+    "run": "numero_neuronios_experiment_10",
+    "perda": 0.0564493015,
+    "lr": 0.0075569486,
+    "alpha": 0.2797163212,
+    "numero_pontos": 2714,
+    "numero_neuronios": 11,
+    "numero_camadas": 8
+  },
+  {
+    "run": "numero_camadas_experiment_1",
+    "perda": 0.0546323545,
+    "lr": 0.0075569486,
+    "alpha": 0.2797163212,
+    "numero_pontos": 2714,
+    "numero_neuronios": 10,
+    "numero_camadas": 4
+  },
+  {
+    "run": "numero_camadas_experiment_2",
+    "perda": 0.0545414016,
+    "lr": 0.0075569486,
+    "alpha": 0.2797163212,
+    "numero_pontos": 2714,
+    "numero_neuronios": 10,
+    "numero_camadas": 6
+  },
+  {
+    "run": "numero_camadas_experiment_3",
+    "perda": 0.049071271,
+    "lr": 0.0075569486,
+    "alpha": 0.2797163212,
+    "numero_pontos": 2714,
+    "numero_neuronios": 10,
+    "numero_camadas": 4
+  },
+  {
+    "run": "numero_camadas_experiment_4",
+    "perda": 0.0567697063,
+    "lr": 0.0075569486,
+    "alpha": 0.2797163212,
+    "numero_pontos": 2714,
+    "numero_neuronios": 10,
+    "numero_camadas": 7
+  },
+  {
+    "run": "numero_camadas_experiment_5",
+    "perda": 0.0568998046,
+    "lr": 0.0075569486,
+    "alpha": 0.2797163212,
+    "numero_pontos": 2714,
+    "numero_neuronios": 10,
+    "numero_camadas": 8
+  },
+  {
+    "run": "numero_camadas_experiment_6",
+    "perda": 0.0540759303,
+    "lr": 0.0075569486,
+    "alpha": 0.2797163212,
+    "numero_pontos": 2714,
+    "numero_neuronios": 10,
+    "numero_camadas": 6
+  },
+  {
+    "run": "numero_camadas_experiment_7",
+    "perda": 0.0558397993,
+    "lr": 0.0075569486,
+    "alpha": 0.2797163212,
+    "numero_pontos": 2714,
+    "numero_neuronios": 10,
+    "numero_camadas": 7
+  },
+  {
+    "run": "numero_camadas_experiment_8",
+    "perda": 0.0518554561,
+    "lr": 0.0075569486,
+    "alpha": 0.2797163212,
+    "numero_pontos": 2714,
+    "numero_neuronios": 10,
+    "numero_camadas": 8
+  },
+  {
+    "run": "numero_camadas_experiment_9",
+    "perda": 0.047188174,
+    "lr": 0.0075569486,
+    "alpha": 0.2797163212,
+    "numero_pontos": 2714,
+    "numero_neuronios": 10,
+    "numero_camadas": 8
+  },
+  {
+    "run": "numero_camadas_experiment_10",
+    "perda": 0.061479833,
+    "lr": 0.0075569486,
+    "alpha": 0.2797163212,
+    "numero_pontos": 2714,
+    "numero_neuronios": 10,
+    "numero_camadas": 5
+  }
+]
